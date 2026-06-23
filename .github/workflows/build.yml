@@ -60,7 +60,7 @@ jobs:
         run: |
           cd vcmi
           & $env:CONANRUN_PWSH_SCRIPT
-          cmake --preset windows-msvc-ninja-release -DENABLE_CCACHE=OFF
+          cmake --preset windows-msvc-ninja-release -DENABLE_CCACHE=OFF -DCMAKE_C_COMPILER_LAUNCHER= -DCMAKE_CXX_COMPILER_LAUNCHER=
 
       - name: Build
         shell: pwsh
